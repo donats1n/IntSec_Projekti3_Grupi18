@@ -25,7 +25,34 @@ namespace DecrypterPOC
 
         static void Main(string[] args)
         {
-           
+           if (DECRYPT_DESKTOP)
+            {
+                decryptFolderContents(DESKTOP_FOLDER);
+            }
+
+            if (DECRYPT_PICTURES)
+            {
+                decryptFolderContents(PICTURES_FOLDER);
+            }
+
+            if (DECRYPT_DOCUMENTS)
+            {
+                decryptFolderContents(DOCUMENTS_FOLDER);
+            }
+
+            if (DECRYPT_FOLDER)
+            {
+                decryptFolderContents(RANDOM_FOLDER);
+            }
+
+            if (decryptedFileCount > 0)
+            {
+                dropDecryptionLog();
+            }
+            else
+            {
+                Console.Out.WriteLine("No files to encrypt.");
+            } 
         }
 
     }
