@@ -20,7 +20,7 @@ namespace DecrypterPOC
         private static string DOCUMENTS_FOLDER = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         private static string PICTURES_FOLDER = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
         private static string DECRYPTION_LOG = "";
-        private static string RANDOM_FOLDER = "C:/Users/Admin/Desktop/random";
+        private static string RANDOM_FOLDER = "C:/Users/Amigos/Desktop/random";
         private static int decryptedFileCount = 0;
 
         static void Main(string[] args)
