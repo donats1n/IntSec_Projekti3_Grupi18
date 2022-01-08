@@ -1,0 +1,19 @@
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\RansomwarePOC.Form1.resources
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.GenerateResource.cache
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.CoreCompileInputs.cache
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Safe Folder\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\EncrypterPOC.csprojAssemblyReference.cache
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\RansomwarePOC.Form1.resources
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.GenerateResource.cache
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.CoreCompileInputs.cache
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Amigos\Desktop\semestri 5\Siguria ne internet\Projekti 3\EncrypterPOC-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
