@@ -1,5 +1,3 @@
 # EncrypterPOC
 
-THIS IS A PROOF OF CONCEPT. DO NOT USE THIS TO COMMIT CRIME.
-I AM NOT RESPONSIBLE FOR YOU DOING DUMB STUFF.
-THIS SOURCE HAS BEEN USED AND MADE AVAILABLE FOR PRESENTATION AND EDUCATIONAL PURPOSES. 
+EncrypterPOC-Programi i cili e bene enkriptimin e fajllave ne folderin ku ekzekutohet. Ky program eshte krijuar per qellime edukative, mos e perdoreni ate per qellime te paligjshme.
