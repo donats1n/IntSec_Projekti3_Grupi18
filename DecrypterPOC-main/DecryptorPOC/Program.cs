@@ -54,6 +54,44 @@ namespace DecrypterPOC
                 Console.Out.WriteLine("No files to encrypt.");
             } 
         }
+        private static void dropDecryptionLog()
+        {
+            StreamWriter ransomWriter = new StreamWriter(DESKTOP_FOLDER + @"\___DECRYPTION_LOG.txt");
+            ransomWriter.WriteLine(decryptedFileCount + " files have been decrypted." +
+                "\n----------------------------------------\n" +
+                DECRYPTION_LOG);
+            ransomWriter.Close();
+        }
 
+        private static bool fileIsEncrypted(string inputFile)
+        {
+            if (inputFile.Contains(ENCRYPTED_FILE_EXTENSION))
+                if (inputFile.Substring(inputFile.Length - ENCRYPTED_FILE_EXTENSION.Length, ENCRYPTED_FILE_EXTENSION.Length) == ENCRYPTED_FILE_EXTENSION)
+                    return true;
+            return false; 
+        }
+
+        static void decryptFolderContents(string sDir)
+        {
+            try
+            {
+                foreach (string file in Directory.GetFiles(sDir))
+                {
+                    if (fileIsEncrypted(file))
+                    {
+                        FileDecrypt(file, file.Substring(0, file.Length - ENCRYPTED_FILE_EXTENSION.Length), ENCRYPT_PASSWORD);
+                    }
+                }
+
+                foreach (string directory in Directory.GetDirectories(sDir))
+                {
+                    decryptFolderContents(directory);
+                }
+            }
+            catch (System.Exception excpt)
+            {
+                Console.WriteLine(excpt.Message);
+            }
+        }
     }
 }
