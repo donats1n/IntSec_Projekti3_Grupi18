@@ -54,7 +54,7 @@ namespace DecrypterPOC
                 Console.Out.WriteLine("No files to encrypt.");
             } 
         }
-        private static void dropDecryptionLog()
+       private static void dropDecryptionLog()
         {
             StreamWriter ransomWriter = new StreamWriter(DESKTOP_FOLDER + @"\___DECRYPTION_LOG.txt");
             ransomWriter.WriteLine(decryptedFileCount + " files have been decrypted." +
@@ -70,7 +70,6 @@ namespace DecrypterPOC
                     return true;
             return false; 
         }
-
         static void decryptFolderContents(string sDir)
         {
             try
