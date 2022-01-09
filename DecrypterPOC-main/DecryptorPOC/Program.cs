@@ -6,7 +6,6 @@ namespace DecrypterPOC
 {
     class Program
     {
-
         private const bool DELETE_ENCRYPTED_FILE = true; /* CAUTION */
         private const bool DECRYPT_DESKTOP = false;
         private const bool DECRYPT_DOCUMENTS = false;
