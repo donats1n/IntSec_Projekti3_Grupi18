@@ -169,7 +169,7 @@ namespace RansomwarePOC
                 }
             }
         }
-
+        
         public static byte[] GenerateRandomSalt()
         {
             byte[] data = new byte[32];
